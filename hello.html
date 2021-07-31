@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS_Study</title>
+    <script>
+        function nightDayHandle(self){
+            let target = document.querySelector('body');
+            if(self.value === 'night'){
+                target.style.background = 'black';
+                target.style.color = 'white';
+                self.value = 'day';
+            } else {
+                target.style.background = 'white';
+                target.style.color = 'black';
+                self.value = 'night';
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>BlockChain_Is_Future</h1>
@@ -122,8 +136,20 @@
         }
         sum(2,3);
         sum(3,4);
+        </script>
+        <!-- 같은 함수를 다른 버전으로 여러 번 사용할 수 있다 -->
+        <h2>Return</h2> 
+    <script>
+        function sum2(left, right){
+            return left+right;
+        }
+        document.write(sum2(2,3)+'<br>');
+        document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+        document.write('<div style="font-size:2rem">'+sum2(2,3)+'</div>');
     </script>
-    <h2>Return</h2>
+    <h2>Function's 활용</h2>
 
+    <input id='night_day' type='button' value='night' onclick="
+        nightDayHandle(this);">
 </body>
 </html>
