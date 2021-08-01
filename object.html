@@ -23,12 +23,23 @@
         coworkers["data scientist"] = "teaho";
         document.write("data scientist : "+coworkers["data scientist"]+"<br>");
     </script>
-    
+
     <h2>Iterate</h2>
     <script>
         for(let key in coworkers) {
             document.write(key+' : '+coworkers[key]+'<br>');
         }
+    </script>
+
+    <h2>Property & Method</h2>
+    <h3>객체에 소속된 변수는 Property, 객체에 소속된 함수는 Method</h3>
+    <script>
+        coworkers.showAll = function() {
+            for(let key in this) {
+            document.write(key+' : '+this[key]+'<br>');
+        }
+    }
+    coworkers.showAll();
     </script>
 
 </body>
