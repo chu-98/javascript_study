@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS_Study</title>
     <script>
+        function setColor(color){
+            let alist = document.querySelectorAll('a');
+                let i = 0;
+                while(i < alist.length){
+                    alist[1].style.color = 'powderblue'
+                    i = i + 1;
+                }
+        }
         function nightDayHandle(self){
             let target = document.querySelector('body');
             if(self.value === 'night'){
                 target.style.background = 'black';
                 target.style.color = 'white';
                 self.value = 'day';
+
+                setColor('blue');
+                
             } else {
                 target.style.background = 'white';
                 target.style.color = 'black';
                 self.value = 'night';
+
+                setColor('blue');
             }
         }
     </script>
@@ -151,5 +164,8 @@
 
     <input id='night_day' type='button' value='night' onclick="
         nightDayHandle(this);">
+    
+
+
 </body>
 </html>
