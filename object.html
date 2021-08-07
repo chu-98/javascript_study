@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Object</title>
-</head>
-<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="hello.js"></script>
+  </head>
+  <body>
     <h1>Object</h1>
-    <h3>로직에 이름을 부여한다고 생각하자! 결국 더 편해지자고 무엇을 개발하고 배우는 것이네. 객체를 폴더라고 생각하자. 객체에 속해 있는 함수들은 메소드(Method)라는 별도의 이름으로 부르게 됩니다. </h3>
+    <h3>
+      로직에 이름을 부여한다고 생각하자! 결국 더 편해지자고 무엇을 개발하고
+      배우는 것이네. 객체를 폴더라고 생각하자. 객체에 속해 있는 함수들은
+      메소드(Method)라는 별도의 이름으로 부르게 됩니다.
+    </h3>
     <h3>객체는 이름이 있는 수납상자 느낌?</h3>
     <h2>Create</h2>
     <script>
-        let coworkers = {
-            "programmer" : "egoing",
-            "designer" : "leezche"
-        };
-        document.write("programmer : "+coworkers.programmer+"<br>");
-        document.write("designer : "+coworkers.designer+"<br>");
-        coworkers.bookkeeper = "duru";
-        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
-        coworkers["data scientist"] = "teaho";
-        document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+      let coworkers = {
+        programmer: "egoing",
+        designer: "leezche",
+      };
+      document.write("programmer : " + coworkers.programmer + "<br>");
+      document.write("designer : " + coworkers.designer + "<br>");
+      coworkers.bookkeeper = "duru";
+      document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+      coworkers["data scientist"] = "teaho";
+      document.write(
+        "data scientist : " + coworkers["data scientist"] + "<br>"
+      );
     </script>
 
     <h2>Iterate</h2>
     <script>
-        for(let key in coworkers) {
-            document.write(key+' : '+coworkers[key]+'<br>');
-        }
+      for (let key in coworkers) {
+        document.write(key + " : " + coworkers[key] + "<br>");
+      }
     </script>
 
     <h2>Property & Method</h2>
     <h3>객체에 소속된 변수는 Property, 객체에 소속된 함수는 Method</h3>
     <script>
-        coworkers.showAll = function() {
-            for(let key in this) {
-            document.write(key+' : '+this[key]+'<br>');
+      coworkers.showAll = function () {
+        for (let key in this) {
+          document.write(key + " : " + this[key] + "<br>");
         }
-    }
-    coworkers.showAll();
+      };
+      coworkers.showAll();
     </script>
 
     <h2></h2>
-
-</body>
+  </body>
 </html>
